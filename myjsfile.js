@@ -1,4 +1,4 @@
-/*  Week 7 
+/*  Week 7 Assignment
 
 1. Create an array called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
 Programmatically subtract the value of the first element in the array from the value in the
@@ -195,10 +195,44 @@ function willBuyDrink(isHotOutside) {
 
 14.
 Create a function of your own that solves a problem. In comments,
- write what the function does and why you created it.   */
+ write what the function does and why you created it. */
 
-function learnJavaScript() {
+ /*I found a simple code but changed it as most lottos use a high number plus a power ball so I copied
+ generator and renamed it powerball to count 
+ and I thought it is fun and useful code espsically for learning  loops,
+ operators  */
 
+function generateLottoNumbers(count, min, max) {
+  if (count <= 0 || max <= min) {
+    return "Invalid input parameters.";
+  }
 
+  const lottoNumbers = [];
+  while (lottoNumbers.length < count) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    if (!lottoNumbers.includes(randomNumber)) {
+      lottoNumbers.push(randomNumber);
+    }
+  }
+  return lottoNumbers.sort((a, b) => a - b);
+
+  function generateLottoNumbers2(count, min, max) {
+  if (count <= 0 || max <= min) {
+    return "Invalid input parameters.";
+  }
+
+  const lottoNumbers2 = [];
+  while (lottoNumbers2.length < count) {
+    const randomNumber2 = Math.floor(Math.random() * (max - min + 1)) + min;
+    if (!lottoNumbers2.includes(randomNumber2)) {
+      lottoNumbers2.push(randomNumber2);
+    }
+  }
+  return lottoNumbers2.sort((a, b) => a - b);
 }
- 
+
+
+const numbers = generateLottoNumbers(6, 1, 49); // Generate 6 unique numbers between 1 and 49
+const powerball = generateLottoNumbers2(1, 1, 26); // Generate 1 unique numbers between 1 and 26
+console.log(numbers + powerball);
+}

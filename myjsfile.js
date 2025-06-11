@@ -197,8 +197,8 @@ function willBuyDrink(isHotOutside) {
 Create a function of your own that solves a problem. In comments,
  write what the function does and why you created it. */
 
- /*I found a simple code but changed it as most lottos use a high number plus a power ball so I copied
- generator and renamed it powerball to count 
+ /*I found a simple code but changed it as most lottos use a high number than 49 plus a power ball so I copied
+ generator and renamed it powerball to count so it used 2 generators 
  and I thought it is fun and useful code espsically for learning  loops,
  operators  */
 

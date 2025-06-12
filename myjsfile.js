@@ -30,19 +30,14 @@ for (let i = 0; i < ages.length; i++) {
 
 let average = sum / ages.length;
 
-console.log("Average age:", average)
+console.log("Avg age", average)
 
 /*  
 
 3.
 Create an array called names that contains the following 
 values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
-
-
-
-
-
- */
+*/
 
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 let totalLetters = 0;
@@ -58,7 +53,7 @@ for (let i = 0; i < names.length; i++) {
 concatenate all the names together, separated by spaces */
 
 let averageLetters = totalLetters / names.length;
-console.log("Average letters / Per name", averageLetters);
+console.log("Avg letters / Per name", averageLetters);
 let allNames = "";
 
 for (let i = 0; i < names.length; i++) {
@@ -74,18 +69,19 @@ console.log("Names concat", allNames);
 /* 4. 
 How do you access the last element of any array?
 
-I used pop!   */
-
+I used pop it used for accessing the last element.   */
+ 
 let myArray2 = [1, 2, 3, 4, 5]; {
 const lastElement = myArray2.pop();
 return myArray2;
 
 }
 // 5. How do you access the first element of any array?
-// I used Shift for grabing the last element. 
+// so I used Shift for acessing the last element. 
 
 let myArray3 = [1, 2, 3, 4, 5];
-let firstElement = myArray.shift();
+let firstElement = myArray3.shift();
+return myArray3
 
 /*  
 6.
@@ -98,30 +94,24 @@ let names1 = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 let names2 = ["Kelly", "Sam", "Kate"];
 let nameLengths = [5, 3, 4];            
 
-for (let i = 0; i < names1.length + names2.length; i++) {
-name3 = (names1.length + names2.length)  
-nameLengths.push(names[i].length);
+  for (let i = 0; i < names1.length, names2.length; i++) {
+    name3 = (names1.length + names2.length)  
+    nameLengths.push(names3[i].length);
 }
+  console.log("Name lengths:", name3);
 
-console.log("Name lengths:", name3);
-
-
-/*  
-7.
-Write a loop to iterate over the nameLengths array and calculate the
+/* 7. Write a loop to iterate over the nameLengths array and calculate the
  sum of all the elements in the array.  */
 
 function nameLengths(nameLengths) {
     let sum = 0;
-    for (let i = 0; i < nameLengths.length; i++) {
+      for (let i = 0; i < nameLengths.length; i++) {
         sum += nameLengths[i];
     }
     return sum;
 }
 
- /*  FRESH CODE>>  
-
-8.
+ /* 8. <<<FRESH CODE>>
 Write a function that takes two parameters, word and n, as arguments 
 and returns the word concatenated to itself n number of times.
  (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').  */
@@ -143,11 +133,8 @@ function twoPar2(firstName, lastName) {
 
 }
 
-/*  
-10.
-Write a function that takes an array of numbers and
- returns true if the sum of all the numbers in the array is greater than 100.
-   */
+/*  10. Write a function that takes an array of numbers and
+ returns true if the sum of all the numbers in the array is greater than 100. */
 
  function arrayNum1()  {
     sum(arrayNum1 > 100)
@@ -155,35 +142,27 @@ Write a function that takes an array of numbers and
  
  }
 
- /*  
-11.
-Write a function that takes an array of numbers and
- returns the average of all the elements in the array.   */
+ /* 11. Write a function that takes an array of numbers and returns 
+ the average of all the elements in the array. */
 
  function arrayNum2() {
     return avg(arrayNum);
  }
 
- /*  
-12.
-Write a function that takes two arrays of numbers and
+ /*  12. Write a function that takes two arrays of numbers and
  returns true if the average of the elements in the first
-  array is greater than the average of the elements in the second array. 
-  
-  I used a String Concatenation 
-  */
+array is greater than the average of the elements in the second array. 
+  Note I used a Concatenation */
 
   function twoArrays(num1, num2) {
     return avg(num1.concat(num2)) > avg(num2);
   }
     
 
-  /*  
-
-13.
+  /* 13.
 Write a function called willBuyDrink that takes a boolean
- isHotOutside, and a number moneyInPocket, and returns true
-  if it is hot outside and if moneyInPocket is greater than 10.50.  */
+isHotOutside, and a number moneyInPocket, and returns true
+if it is hot outside and if moneyInPocket is greater than 10.50.  */
 
 function willBuyDrink(isHotOutside) {
     moneyInPocket = 12.75
@@ -191,15 +170,13 @@ function willBuyDrink(isHotOutside) {
     return true;
 }
 
-/*  
-
-14.
+/* 14.
 Create a function of your own that solves a problem. In comments,
  write what the function does and why you created it. */
 
- /*I found a simple code but changed it as most lottos use a high number than 49 plus a power ball so I copied
- generator and renamed it powerball to count so it used 2 generators 
- and I thought it is fun and useful code espsically for learning  loops,
+ /*I found a simple random number code but changed it as most lottos use a high number than 49 
+ plus added power ball random so I copied generator and renamed it powerball to count so I used 
+ 2 numbers generators. I thought it is fun and useful code espsically for learning  loops,
  operators  */
 
 function generateLottoNumbers(count, min, max) {
@@ -230,7 +207,6 @@ function generateLottoNumbers(count, min, max) {
   }
   return lottoNumbers2.sort((a, b) => a - b);
 }
-
 
 const numbers = generateLottoNumbers(6, 1, 49); // Generate 6 unique numbers between 1 and 49
 const powerball = generateLottoNumbers2(1, 1, 26); // Generate 1 unique numbers between 1 and 26

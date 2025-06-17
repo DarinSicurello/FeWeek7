@@ -10,10 +10,10 @@ ages[7] - ages[0] is not allowed!
 */
 
 
-let ages = [3, 9, 23, 64, 2, 8, 28, 9];
+let ages = [3, 9, 23, 64, 2, 8, 28, 9]; 
 let result = ages[ages.length - 1] - ages[0];
 
-console.log(result);
+console.log(ages);
 
 
 /*  
@@ -40,7 +40,7 @@ values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
 */
 
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
-let totalLetters = 0;
+console.log(names)
 
 // Use a loop to iterate through the array and calculate the
 //average number of letters per name.
@@ -52,36 +52,48 @@ for (let i = 0; i < names.length; i++) {
 /* Use a loop to iterate through the array again and 
 concatenate all the names together, separated by spaces */
 
-let averageLetters = totalLetters / names.length;
-console.log("Avg letters / Per name", averageLetters);
-let allNames = "";
 
+// Initialize "totalLetters" before using it
+let totalLetters = 0;
+
+for (let i = 0; i < names.length; i++) {
+  totalLetters += names[i].length;
+}
+
+// Comeplete code  
+
+let averageLetters = totalLetters / names.length;
+console.log("Avg letters / Per name:", averageLetters);
+
+let allNames = "";
 for (let i = 0; i < names.length; i++) {
   allNames += names[i];
   if (i < names.length - 1) {
     allNames += " ";
   }
 }
-console.log("Names concat", allNames);
+
+console.log("Names concat:", allNames);
 
 
 
 /* 4. 
 How do you access the last element of any array?
 
-I used pop it used for accessing the last element.   */
+I used pop it used for accessing the last element as its easy to
+remeber   */
  
-let myArray2 = [1, 2, 3, 4, 5]; {
-const lastElement = myArray2.pop();
-return myArray2;
+const arr = [1, 2, 3, 4, 5];
+   const lastElement = arr.pop();
+console.log(lastElement);
 
-}
+
 // 5. How do you access the first element of any array?
 // so I used Shift for acessing the last element. 
 
-let myArray3 = [1, 2, 3, 4, 5];
-let firstElement = myArray3.shift();
-return myArray3
+const arr2 = [1, 2, 3, 4, 5];
+   const firstElement = arr2.shift();
+console.log(firstElement);
 
 /*  
 6.
@@ -92,33 +104,44 @@ For example:   */
 
 let names1 = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 let names2 = ["Kelly", "Sam", "Kate"];
-let nameLengths = [5, 3, 4];            
+let nameLengths = [5, 3, 4];  // This might be leftover; you can reset it if needed
 
-  for (let i = 0; i < names1.length, names2.length; i++) {
-    name3 = (names1.length + names2.length)  
-    nameLengths.push(names3[i].length);
+// Combine both name arrays
+let combinedNames = names1.concat(names2);
+
+// Clear or reinitialize nameLengths if you want to start fresh
+nameLengths = [];
+
+for (let i = 0; i < combinedNames.length; i++) {
+  nameLengths.push(combinedNames[i].length);
 }
-  console.log("Name lengths:", name3);
+
+console.log("Name lengths:", nameLengths);
 
 /* 7. Write a loop to iterate over the nameLengths array and calculate the
  sum of all the elements in the array.  */
 
-function nameLengths(nameLengths) {
-    let sum = 0;
-      for (let i = 0; i < nameLengths.length; i++) {
-        sum += nameLengths[i];
-    }
-    return sum;
+let nameLengths2 = [3, 5, 4, 5, 4, 3, 5, 3, 4];  // Example values Lenghts. 
+
+let totalLength2 = 0;
+
+for (let i = 0; i < nameLengths2.length; i++) {
+  totalLength += nameLengths2[i];
 }
+
+console.log("Total sum of name lengths:", totalLength);
+
 
  /* 8. <<<FRESH CODE>>
 Write a function that takes two parameters, word and n, as arguments 
 and returns the word concatenated to itself n number of times.
  (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').  */
 
- function twoPar1(word, n) {
- return(twoPar1)
- }
+function repeatWord(word, n) {
+  return word.repeat(n);
+
+}
+console.log(repeatWord("Hello", 3));
 
 /*  
 9.
@@ -127,36 +150,66 @@ and returns a full name. The full name should be the first and the
 last name separated by a space.
  */
 
-function twoPar2(firstName, lastName) {
-    fullName = (firstName  +  lastName)
-    return(fullName)
-
+function namesPar(firstName, lastName) {
+  let fullName = firstName + " " + lastName;
+  return fullName;
 }
+
+console.log(namesPar("Darin", "Sicurello")); 
+
 
 /*  10. Write a function that takes an array of numbers and
  returns true if the sum of all the numbers in the array is greater than 100. */
 
- function arrayNum1()  {
-    sum(arrayNum1 > 100)
- returns = true;
- 
- }
+let arrayNum100 = [1, 55, 79, 45, 25, 99];
+function isSumGreaterThan100(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum > 100;
+}
+console.log(isSumGreaterThan100(arrayNum100));
 
  /* 11. Write a function that takes an array of numbers and returns 
  the average of all the elements in the array. */
 
- function arrayNum2() {
-    return avg(arrayNum);
- }
+let arrayNumAvg = [2, 5, 78, 34, 45, 23, 89];
+
+function getAvgNum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+console.log(getAvgNum(arrayNumAvg));
 
  /*  12. Write a function that takes two arrays of numbers and
  returns true if the average of the elements in the first
 array is greater than the average of the elements in the second array. 
   Note I used a Concatenation */
 
-  function twoArrays(num1, num2) {
-    return avg(num1.concat(num2)) > avg(num2);
+let arrayNumAvg2 = [2, 5, 78, 34, 45, 23, 89];
+let arrayNumAvg3 = [4, 9, 28, 78, 91, 62, 97];
+
+function compareAverages(arr1, arr2) {
+  // Helper function to calculate average
+  function getAverage(arr) {
+    if (arr.length === 0) return 0;
+    return arr.reduce((sum, num) => sum + num, 0) / arr.length;
   }
+
+  if (getAverage(arr1) > getAverage(arr2)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(compareAverages(arrayNumAvg2, arrayNumAvg3))
+  
+  
     
 
   /* 13.
@@ -165,10 +218,18 @@ isHotOutside, and a number moneyInPocket, and returns true
 if it is hot outside and if moneyInPocket is greater than 10.50.  */
 
 function willBuyDrink(isHotOutside) {
-    moneyInPocket = 12.75
-    if (moneyInPocket > 10.50)
+  let moneyInPocket = 12.75;
+  
+  if (isHotOutside && moneyInPocket > 10.50) {
     return true;
+  } else {
+    return false;
+  }
 }
+
+console.log(willBuyDrink(true));  
+console.log(willBuyDrink(false)) 
+
 
 /* 14.
 Create a function of your own that solves a problem. In comments,
@@ -179,36 +240,20 @@ Create a function of your own that solves a problem. In comments,
  2 numbers generators. I thought it is fun and useful code espsically for learning  loops,
  operators  */
 
-function generateLottoNumbers(count, min, max) {
-  if (count <= 0 || max <= min) {
-    return "Invalid input parameters.";
+function generateLotteryNumbers(count, max) {
+  const numbers = new Set();
+  while (numbers.size < count) {
+    const randomNumber = Math.floor(Math.random() * max) + 1;
+    numbers.add(randomNumber);
   }
-
-  const lottoNumbers = [];
-  while (lottoNumbers.length < count) {
-    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    if (!lottoNumbers.includes(randomNumber)) {
-      lottoNumbers.push(randomNumber);
-    }
-  }
-  return lottoNumbers.sort((a, b) => a - b);
-
-  function generateLottoNumbers2(count, min, max) {
-  if (count <= 0 || max <= min) {
-    return "Invalid input parameters.";
-  }
-
-  const lottoNumbers2 = [];
-  while (lottoNumbers2.length < count) {
-    const randomNumber2 = Math.floor(Math.random() * (max - min + 1)) + min;
-    if (!lottoNumbers2.includes(randomNumber2)) {
-      lottoNumbers2.push(randomNumber2);
-    }
-  }
-  return lottoNumbers2.sort((a, b) => a - b);
+  return Array.from(numbers).sort((a, b) => a - b); // Convert set to array and sort
 }
 
-const numbers = generateLottoNumbers(6, 1, 49); // Generate 6 unique numbers between 1 and 49
-const powerball = generateLottoNumbers2(1, 1, 26); // Generate 1 unique numbers between 1 and 26
-console.log(numbers + powerball);
-}
+// Example usage for a 6-number lottery with numbers from 1 to 60:
+const lotteryNumbers = generateLotteryNumbers(6, 69);
+const powerballNumbers = generateLotteryNumbers(1, 26);
+console.log('Your Lucky Numbers Today are:')
+console.log(lotteryNumbers);
+console.log('...and your Powerball Number is:')
+console.log(powerballNumbers);
+// Check out my Lotto HTML page!  

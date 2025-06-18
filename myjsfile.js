@@ -44,23 +44,22 @@ console.log(names)
 
 // Use a loop to iterate through the array and calculate the
 //average number of letters per name.
-
+let totalLetters = 0;
 for (let i = 0; i < names.length; i++) {
-  totalLetters += names[i].length;
+totalLetters += names[i].length;
 }
 
 /* Use a loop to iterate through the array again and 
-concatenate all the names together, separated by spaces */
+concatenate all the names together, separated by spaces 
+Initialize "totalLetters" before using it */
 
 
-// Initialize "totalLetters" before using it
-let totalLetters = 0;
 
 for (let i = 0; i < names.length; i++) {
   totalLetters += names[i].length;
 }
 
-// Comeplete code  
+// Complete code  
 
 let averageLetters = totalLetters / names.length;
 console.log("Avg letters / Per name:", averageLetters);
@@ -126,10 +125,10 @@ let nameLengths2 = [3, 5, 4, 5, 4, 3, 5, 3, 4];  // Example values Lenghts.
 let totalLength2 = 0;
 
 for (let i = 0; i < nameLengths2.length; i++) {
-  totalLength += nameLengths2[i];
+totalLength2 += nameLengths2[i];
 }
 
-console.log("Total sum of name lengths:", totalLength);
+console.log("Total sum of name lengths:", totalLength2);
 
 
  /* 8. <<<FRESH CODE>>

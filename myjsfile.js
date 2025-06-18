@@ -1,3 +1,4 @@
+
 /*  Week 7 Assignment
 
 1. Create an array called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
@@ -5,22 +6,27 @@ Programmatically subtract the value of the first element in the array from the v
 last element of the array.
 Do not use numbers to reference the last element, find it programmatically.
 ages[7] - ages[0] is not allowed!
+2>
+Add a new age to your array and repeat the step above to ensure it is dynamic.
+ (works for arrays of different lengths).
+Use a loop to iterate through the array and calculate the average age.
 
+3.
+Create an array called names that contains the following 
+values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
 
-*/
+Use a loop to iterate through the array and calculate the
+//average number of letters per name.
+
+Use a loop to iterate through the array again and 
+concatenate all the names together, separated by spaces 
+Initialize "totalLetters" before using it  Complete Below code */
 
 
 let ages = [3, 9, 23, 64, 2, 8, 28, 9]; 
-let result = ages[ages.length - 1] - ages[0];
+let result = ages[ages.length - 1] - ages[0]; {
 
 console.log(ages);
-
-
-/*  
-2. 
-Add a new age to your array and repeat the step above to ensure it is dynamic.
- (works for arrays of different lengths).
-Use a loop to iterate through the array and calculate the average age. */
 
 ages.push(35);  
 let sum = 0;
@@ -32,35 +38,21 @@ let average = sum / ages.length;
 
 console.log("Avg age", average)
 
-/*  
-
-3.
-Create an array called names that contains the following 
-values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
-*/
-
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 console.log(names)
 
-// Use a loop to iterate through the array and calculate the
-//average number of letters per name.
+
 let totalLetters = 0;
 for (let i = 0; i < names.length; i++) {
 totalLetters += names[i].length;
 }
-
-/* Use a loop to iterate through the array again and 
-concatenate all the names together, separated by spaces 
-Initialize "totalLetters" before using it */
-
 
 
 for (let i = 0; i < names.length; i++) {
   totalLetters += names[i].length;
 }
 
-// Complete code  
-
+ 
 let averageLetters = totalLetters / names.length;
 console.log("Avg letters / Per name:", averageLetters);
 

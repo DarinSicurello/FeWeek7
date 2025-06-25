@@ -247,4 +247,6 @@ console.log('Your Lucky Numbers Today are:')
 console.log(lotteryNumbers);
 console.log('...and your Powerball Number is:')
 console.log(powerballNumbers);
-// Check out my Lotto HTML page!  
+
+
+// Check out my Lotto HTML page! 
